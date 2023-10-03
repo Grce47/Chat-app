@@ -1,0 +1,28 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "MERN CHAT APP",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grce47/Chat-app.git"
+  },
+  "author": "Grce47",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grce47/Chat-app/issues"
+  },
+  "homepage": "https://github.com/Grce47/Chat-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.3",
+    "nodemon": "^3.0.1"
+  }
+}
