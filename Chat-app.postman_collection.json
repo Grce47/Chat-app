@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "2b730f18-9818-4ea2-ba68-37817770cf9a",
+		"name": "Chat-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21172582"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"grace@example.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/user/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" :\"Guest\",\r\n    \"email\" : \"guest@example.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/user/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_or_create_chat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/chat/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"chat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_all_chats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/chat/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"chat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/chat/group/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"chat",
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rename_group",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/chat/rename/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"chat",
+						"rename",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group_add",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/chat/groupadd/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"chat",
+						"groupadd",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "groupremove",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/chat/groupremove",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"chat",
+						"groupremove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/user?search=g",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "g"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMessages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/message/0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"message",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send message",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:5000"
+		},
+		{
+			"key": "GraceToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MWMyZmJmMWEwNDc4YThlNjg2Mjk3NCIsImlhdCI6MTY5NjM0NzYyMiwiZXhwIjoxNjk4OTM5NjIyfQ.p-IRJoHPNfDokMyIrU9be7ggP2iAKv1iDnXSunC_Et0"
+		}
+	]
+}
