@@ -22,12 +22,12 @@ const CFaLock = chakra(FaLock);
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setemail] = useState("");
+  const [name, setname] = useState("");
   const [password, setpassword] = useState("");
 
   const handleShowClick = () => setShowPassword(!showPassword);
-  
   const handleSubmit = () => {
-    console.log({ email, password });
+    console.log({ email, name, password });
   };
 
   return (
@@ -46,7 +46,7 @@ const Signup = () => {
         alignItems="center"
       >
         <Avatar bg="teal.500" />
-        <Heading color="teal.400">Login</Heading>
+        <Heading color="teal.400">Sign Up</Heading>
         <Box minW={{ base: "90%", md: "468px" }}>
           <Stack
             spacing={4}
@@ -67,7 +67,19 @@ const Signup = () => {
                 />
               </InputGroup>
             </FormControl>
-
+            <FormControl>
+              <InputGroup>
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<CFaUserAlt color="gray.300" />}
+                />
+                <Input
+                  type="name"
+                  placeholder="Name"
+                  onChange={(e) => setname(e.target.value)}
+                />
+              </InputGroup>
+            </FormControl>
             <FormControl>
               <InputGroup>
                 <InputLeftElement
@@ -95,15 +107,15 @@ const Signup = () => {
               width="full"
               onClick={handleSubmit}
             >
-              Login
+              Sign Up
             </Button>
           </Stack>
         </Box>
       </Stack>
       <Box>
-        New to us?{" "}
-        <Link color="teal.500" href="/signup">
-          Sign Up
+        Already have an account?{" "}
+        <Link color="teal.500" href="/">
+          Login
         </Link>
       </Box>
     </Flex>
